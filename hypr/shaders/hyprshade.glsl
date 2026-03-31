@@ -1,0 +1,1 @@
+/home/SSKS/.config/hypr/shaders/vibrance.glsl

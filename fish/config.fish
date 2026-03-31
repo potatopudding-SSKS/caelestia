@@ -1,14 +1,16 @@
 if status is-interactive
     # Starship custom prompt
-    starship init fish | source
+    # starship init fish | source
 
     # Direnv + Zoxide
     command -v direnv &> /dev/null && direnv hook fish | source
     command -v zoxide &> /dev/null && zoxide init fish --cmd cd | source
 
-    # Better ls
+    # Aliases
     alias ls='eza --icons --group-directories-first -1'
-
+    alias vpn="sudo ~/Desktop/connect_vpn"
+    alias hon="nmcli con up Caelestia"
+    alias hoff="nmcli con down Caelestia"
     # Abbrs
     abbr lg 'lazygit'
     abbr gd 'git diff'
@@ -43,3 +45,4 @@ if status is-interactive
     # Custom fish config
     source ~/.config/caelestia/user-config.fish 2> /dev/null
 end
+pyenv init - | source
